@@ -1,0 +1,18 @@
+@import "body";
+@import "header";
+@import "main";
+@import "footer";
+.contenedor {  
+    text-align: none;
+    display: grid;
+    min-height: 100vh;/*Esto lo puse yo*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 2.6fr 0.2fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+      
+  }

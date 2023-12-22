@@ -1,0 +1,103 @@
+.main { 
+    grid-area: main; 
+    padding-bottom: 40px;
+}
+.seccion {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "seccion1 seccion1"
+      "seccion2 seccion3";
+      height: 100%;
+  }
+  
+.seccion1 {  
+    grid-area: seccion1; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.seccion2 { 
+    grid-area: seccion2; 
+}
+  
+.seccion3 { 
+    grid-area: seccion3; 
+    
+}
+.divTitulo{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divContenido{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.divContenido p{
+    text-align: center;
+    padding: 20px 100px;
+}
+.divContenido img:hover{
+    transform: rotate(30deg);
+}
+@media screen and (max-width:600px){
+    .main{
+        padding-bottom: 40px;
+    }
+        .seccion {  
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.25fr 1.375fr 1.375fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+              "seccion1"
+              "seccion2"
+              "seccion3";
+              min-height: 100vh;
+        }
+          
+        .seccion1 { 
+            grid-area: seccion1; 
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+          
+        .seccion2 { 
+            grid-area: seccion2;
+        }
+          
+        .seccion3 { 
+            grid-area: seccion3; 
+        }
+    .divTitulo{
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .divContenido{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .divContenido img{
+        width: 300px;
+        height: 150px;
+    }
+    .divContenido img:hover{
+        transform: rotate(30deg);
+    }
+}
